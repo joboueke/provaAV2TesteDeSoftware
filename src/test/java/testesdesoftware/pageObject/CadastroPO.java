@@ -11,6 +11,10 @@ public class CadastroPO extends BasePO {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
+	/**
+	 * Identificador de elementos da pagina de cadastro
+	 * @author João e Leo
+	 */
 	@FindBy(id="btn-adicionar")
 	public WebElement buttonAdicionar;
 	
@@ -45,7 +49,15 @@ public class CadastroPO extends BasePO {
 		input.clear();
 		input.sendKeys(texto, Keys.TAB);
 	}
-		
+	/**
+	 * Metodo de cadastro de um produto
+	 * @author João e Leo	
+	 * @param codigo
+	 * @param nome
+	 * @param quantidade
+	 * @param Valor
+	 * @param data
+	 */
 	public void executarCadastroProduto(String codigo,String nome, String quantidade, String Valor, String data) {
 		buttonAdicionar.click();
 		buttonAdicionar.click();
@@ -56,12 +68,26 @@ public class CadastroPO extends BasePO {
 		escrever(inputData, data);
 		buttonSalvar.click();
 	}
+	/**
+	 * Metodo para clicar no botão "voltar"
+	 * @author João e Leo
+	 */
 	public void clicarBotaoVoltar() {
 		buttonVoltar.click();
 	}
+	/**
+	 * Metodo para captar a mensagem de erro
+	 * @author João e Leo
+	 * @return
+	 */
 	public String obterMensagem() {
 		return this.spanMensagem.getText();
 	}
+	/**
+	 * Metodo para capturar o titula da pagina web
+	 * @author João e Leo
+	 * @return
+	 */
 	public String obterTituloDaPagina() {
 		return driver.getTitle();
 	}

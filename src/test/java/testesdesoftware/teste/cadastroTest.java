@@ -10,7 +10,10 @@ import testesdesoftware.pageObject.CadastroPO;
 public class cadastroTest extends BaseTest {
 
 	private static CadastroPO cadastroPage;
-	
+	/**
+	 * Montagem do cenário
+	 * @author João e Leo
+	 */
 	@Before
 	public void prepararTestes() {
 		driver.get("file:///C:/Users/36129382024.2M/Desktop/selenium-lab-main/sistema/produtos.html");
@@ -34,7 +37,7 @@ public class cadastroTest extends BaseTest {
 		assertEquals(mensagemModal, "Todos os campos são obrigatórios para o cadastro!");
 	}
 	@Test
-	public void TC001_naoTrocaDeTelaAoClicarNoBotaoVoltar() {
+	public void TC001_naoTrocarDeTelaAoClicarNoBotaoVoltar() {
 		cadastroPage.clicarBotaoVoltar();
 		
 		String telaCadastro = cadastroPage.obterTituloDaPagina();
