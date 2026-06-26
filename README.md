@@ -1,0 +1,1 @@
+Para a realização da prova, fizemos as classes cadastroPO e cadastroTest, o cadastroPO servindo para identificar elementos da pagina web e seus metodos de execução, enquanto o cadastroTest é responsável pela execução de testes selecionados da planilha do excel.
